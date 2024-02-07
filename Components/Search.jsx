@@ -1,9 +1,9 @@
-const React = require("react");
+const React = require('react');
 
 function searchForm({ cities }) {
   return (
     <form className="search-card">
-      <p>Поиск</p>
+      <p className="search-card__title">Поиск</p>
       <input
         className="search-card__input"
         name="name"
