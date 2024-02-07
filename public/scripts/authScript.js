@@ -13,12 +13,13 @@ if (regForm) {
     const {
       name, email, password, password2, city, method,
     } = event.target;
+    console.log(event.target.city.value);
 
     if (password.value === password2.value) {
       const resReg = await fetch('/api/auth/reg', {
         method,
         headers: {
-          'Content-types': 'application/json',
+          'Content-type': 'application/json',
         },
         body: JSON.stringify({
           name: name.value,

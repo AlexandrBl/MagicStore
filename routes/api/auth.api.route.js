@@ -8,7 +8,7 @@ router.post('/reg', async (req, res) => {
   const {
     name, email, password, city,
   } = req.body;
-
+  console.log(req.body);
   if (name && email && password && city) {
     let user = await User.findOne({ where: { email } });
 

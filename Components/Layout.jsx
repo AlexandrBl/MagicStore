@@ -7,8 +7,8 @@ function Layout({ title, children, cities }) {
     <html lang="en">
       <head>
         <title>{title}</title>
-        {/* <link rel="stylesheet" href="/css/body.css" />
-        <script defer src='/scripts/cards.js'/> */}
+        <link rel="stylesheet" href="/css/reset.css" />
+        <script defer src="/scripts/authScript.js" />
       </head>
       <body>
         <header className="header">

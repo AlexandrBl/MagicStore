@@ -33,14 +33,6 @@ module.exports = {
         },
         onDelete: 'Cascade',
       },
-      orderItem_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'OrderItems',
-          key: 'id',
-        },
-        onDelete: 'Cascade',
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
