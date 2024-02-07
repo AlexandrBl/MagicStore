@@ -1,6 +1,6 @@
-const React = require("react");
+const React = require('react');
 
-function searchForm({ cities }) {
+function SearchForm({ cities }) {
   return (
     <form className="search-card">
       <p className="search-card__title">Поиск</p>
@@ -18,9 +18,9 @@ function searchForm({ cities }) {
           <option className="search-card__option">{el.name}</option>
         ))}
       </datalist>
-      <button className="search-card__btn btn">Поиск</button>
+      <button type="button" className="search-card__btn btn">Поиск</button>
     </form>
   );
 }
 
-module.exports = searchForm;
+module.exports = SearchForm;

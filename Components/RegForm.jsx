@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function RegForm({ cities }) {
+function RegForm({ cities }) {
   return (
     <form method="POST" className="log-form form">
       <input type="text" name="name" className="reg-form__input input" />
@@ -12,8 +12,9 @@ module.exports = function RegForm({ cities }) {
       <input required type="text" name="password" className="reg-form__input input" />
       <input required type="text" name="password2" className="reg-form__input input" />
       <p className="reg-form__message message" />
-      <button className="reg-form__button button">Регистрация</button>
+      <button type="button" className="reg-form__button button">Регистрация</button>
     </form>
-
   );
-};
+}
+
+module.exports = RegForm;

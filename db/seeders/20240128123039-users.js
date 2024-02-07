@@ -8,7 +8,7 @@ module.exports = {
       {
         name: 'admin',
         email: 'admin',
-        password: 'admin',
+        password: hash,
         city_id: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
