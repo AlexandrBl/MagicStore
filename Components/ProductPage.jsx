@@ -5,11 +5,13 @@ const Product = require("./Product");
 function ProductPage({ title, products }) {
   return (
     <Layout title={title}>
-      <div>
+      <ul className="product-list">
         {products.map((el) => (
-          <Product product={el} key={el.id} />
+          <li className="product-list__item">
+            <Product product={el} key={el.id} />
+          </li>
         ))}
-      </div>
+      </ul>
     </Layout>
   );
 }
