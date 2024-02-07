@@ -3,13 +3,26 @@ const React = require("react");
 function Navbar() {
   return (
     <div className="navbar">
-      <a href="">Главная</a>
-      <a href="">Личный кабинет</a>
-      <a href="">Корзина</a>
-      <a href="">Товары</a>
-      <a href="">loga</a>
-      <a href="">rega</a>
-      <a href="">Выход</a>
+      <ul>
+        <li>
+          <a href="">Главная</a>
+        </li>
+        <li>
+          <a href="">Личный кабинет</a>
+        </li>
+        <li>
+          <a href="">Корзина</a>
+        </li>
+        <li>
+          <a href="">Товары</a>
+        </li>
+        <li>
+          <a href="">loga</a>
+        </li>
+        <li>
+          <a href="">Выход</a>
+        </li>
+      </ul>
     </div>
   );
 }
