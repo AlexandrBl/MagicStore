@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require("react");
 
 function searchForm({ cities }) {
   return (
@@ -10,13 +10,14 @@ function searchForm({ cities }) {
         type="text"
         placeholder="Введите имя"
       />
-      <select className="search-card__select" name="city">
+      <p>
+        <input className="search-card__input" name="city" list="cities" />
+      </p>
+      <datalist className="search-card__datalist" id="cities">
         {cities.map((el) => (
-          <option className="search-card__option" value={el.id}>
-            {el.name}
-          </option>
+          <option className="search-card__option">{el.name}</option>
         ))}
-      </select>
+      </datalist>
       <button className="search-card__btn btn">Поиск</button>
     </form>
   );
