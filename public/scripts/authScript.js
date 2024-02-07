@@ -22,6 +22,16 @@ if (regForm) {
           city: city.value,
         }),
       });
+
+      const data = await resReg.json();
+
+      if (data.message === 'Такой пользователь уже существует') {
+        regFormMessage.innerHTML = data.message;
+      } else if (data.message === 'Заполните все поля') {
+        regFormMessage.innerHTML = data.message;
+      } else if (data.message === 'ok') {
+        window.location.assign('/products');
+      }
     } else {
       regFormMessage.innerHTML = 'Пароли не совпадают';
     }
