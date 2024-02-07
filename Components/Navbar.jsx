@@ -1,4 +1,4 @@
-const React = require("react");
+const React = require('react');
 
 function Navbar() {
   return (
@@ -30,9 +30,7 @@ function Navbar() {
           </a>
         </li>
         <li className="nav__el">
-          <a className="link nav__link" href="">
-            Выход
-          </a>
+          <button type="button" className="logOut-button button">Выход</button>
         </li>
       </ul>
     </nav>
