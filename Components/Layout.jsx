@@ -11,11 +11,11 @@ function Layout({ title, children }) {
 
         <script defer src="/scripts/addProductScript.js" />
 
-
         <script defer src="/scripts/filterScript.js" />
 
         <script defer src="/scripts/userScript.js" />
 
+        <script defer src="/scripts/orderScript.js" />
 
       </head>
       <body>

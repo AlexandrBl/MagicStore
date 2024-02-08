@@ -28,9 +28,8 @@ router.get('/cities/:city', async (req, res) => {
   const products = await Product.findAll({ include: { model: User } });
 
   const productsFilter = products.filter(
-    (el) => el.User.city_id === oneCity.id
+    (el) => el.User.city_id === oneCity.id,
   );
-
 });
 
 module.exports = router;
