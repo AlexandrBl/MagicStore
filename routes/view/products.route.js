@@ -30,7 +30,7 @@ router.get('/cities/:city', async (req, res) => {
   const productsFilter = products.filter(
     (el) => el.User.city_id === oneCity.id
   );
-  console.log(productsFilter);
+
 });
 
 module.exports = router;
