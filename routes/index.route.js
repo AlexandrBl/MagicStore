@@ -4,10 +4,12 @@ const productsRouter = require('./view/products.route');
 const authApiRouter = require('./api/auth.api.route');
 const basketRouter = require('./view/basket.route');
 const userRouter = require('./view/user.route');
+const productApiRouter = require('./api/product.api.route');
 
 const { ifNotAuthRedirect } = require('../middleware/auth');
 
 router.use('/api/auth', authApiRouter);
+router.use('/api/products', productApiRouter);
 
 router.use('/auth', authRouter);
 router.use('/products', ifNotAuthRedirect, productsRouter);
