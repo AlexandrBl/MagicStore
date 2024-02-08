@@ -11,7 +11,7 @@ router.get('/card', async (req, res) => {
 
     const html = res.renderComponent(ProductsList, { products, city });
 
-    res.status(201).json(html);
+    res.status(200).json(html);
   } catch ({ message }) {
     console.log(message);
   }
