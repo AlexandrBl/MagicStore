@@ -8,7 +8,11 @@ function Layout({ title, children }) {
         <title>{title}</title>
         <link rel="stylesheet" href="/css/reset.css" />
         <script defer src="/scripts/authScript.js" />
+
+        <script defer src="/scripts/filterScript.js" />
+
         <script defer src="/scripts/userScript.js" />
+
       </head>
       <body>
         <header className="header">
