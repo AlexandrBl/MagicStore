@@ -10,10 +10,8 @@ if (regForm) {
   regForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const {
-      name, email, password, password2, city, method,
-    } = event.target;
-    console.log(event.target.city.value);
+    const { name, email, password, password2, city, method } = event.target;
+
     if (password.value === password2.value) {
       const resReg = await fetch('/api/auth/reg', {
         method,
@@ -66,7 +64,10 @@ if (logForm) {
       window.location.assign('/products');
     } else if (data.message === 'Заполните все поля') {
       regFormMessage.innerHTML = data.message;
-    } else if (data.message === 'Не существет такого пользователя или введен неверный пароль') {
+    } else if (
+      data.message ===
+      'Не существет такого пользователя или введен неверный пароль'
+    ) {
       logFormMessage.innerHTML = data.message;
     }
   });
