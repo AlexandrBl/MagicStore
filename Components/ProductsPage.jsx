@@ -1,12 +1,14 @@
 const React = require('react');
 const Layout = require('./Layout');
 const ProductCard = require('./ProductCard');
+const SearchForm = require('./SearchForm');
 
 function ProductsPage({
   title, products, cities, city,
 }) {
   return (
-    <Layout title={title} cities={cities}>
+    <Layout title={title}>
+      <SearchForm cities={cities} products={products} />
       <ul className="product-list">
         {products.map((el) => (
           <li className="product-list__item">

@@ -1,11 +1,10 @@
 const router = require('express').Router();
 const UserPage = require('../../Components/UserPage');
-const { City, Product } = require('../../db/models');
+const { City } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   try {
     const cities = await City.findAll();
-    
 
     const html = res.renderComponent(UserPage, {
       title: 'Личный кабинет',

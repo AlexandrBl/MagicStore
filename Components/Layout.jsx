@@ -1,8 +1,8 @@
 const React = require('react');
 const Navbar = require('./Navbar');
-const SearchForm = require('./SearchForm');
 
-function Layout({ title, children, cities }) {
+
+function Layout({ title, children }) {
   return (
     <html lang="en">
       <head>
@@ -13,7 +13,6 @@ function Layout({ title, children, cities }) {
       <body>
         <header className="header">
           <div className="center-container">
-            <SearchForm cities={cities} />
             <Navbar />
           </div>
         </header>
