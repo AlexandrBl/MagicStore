@@ -1,14 +1,14 @@
-const React = require("react");
-const Layout = require("./Layuot");
-const Product = require("./Product");
+const React = require('react');
+const Layout = require('./Layout');
+const ProductCard = require('./ProductCard');
 
 function BasketPage({ title, products }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} products={products}>
       <ul className="order-item">
         {products.map((el) => (
           <li className="order-item__el">
-            <Product product={el} key={el.id} />
+            <ProductCard product={el} key={el.id} />
           </li>
         ))}
       </ul>

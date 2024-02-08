@@ -2,6 +2,7 @@ const router = require('express').Router();
 const authRouter = require('./view/auth.route');
 const productsRouter = require('./view/products.route');
 const authApiRouter = require('./api/auth.api.route');
+const basketRouter = require('./view/basket.route');
 
 const userRouter = require('./view/user.route');
 
@@ -13,9 +14,14 @@ router.use('/api/auth', authApiRouter);
 router.use('/auth', authRouter);
 
 
+router.use('/basket', basketRouter);
+
+
+
 router.use('/user', userRouter);
 
 router.use('/products', ifNotAuthRedirect, productsRouter);
+
 
 
 module.exports = router;
