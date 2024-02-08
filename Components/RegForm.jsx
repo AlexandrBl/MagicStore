@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require("react");
 
 function RegForm({ cities }) {
   return (
@@ -10,7 +10,9 @@ function RegForm({ cities }) {
       <input className="reg-form__input input" name="city" list="cities" />
       <datalist className="reg-form__datalist" id="cities">
 
+
         {cities.map((el) => <option className="reg-form__option">{el.name}</option>)}
+
 
       </datalist>
       <input type="text" name="password" className="reg-form__input input" />
