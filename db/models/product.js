@@ -39,19 +39,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         onDelete: 'Cascade',
       },
-      orderItem_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'OrderItems',
-          key: 'id',
-        },
-        onDelete: 'Cascade',
-      },
+
     },
     {
       sequelize,
       modelName: 'Product',
-    }
+    },
   );
   return Product;
 };

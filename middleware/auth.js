@@ -2,7 +2,7 @@ const { User } = require('../db/models');
 
 const ifNotAuthRedirect = (req, res, next) => {
   if (!res.locals.user) {
-    res.redirect('/auth/reg');
+    res.redirect('/auth');
   } else {
     next();
   }
