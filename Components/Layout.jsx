@@ -11,12 +11,9 @@ function Layout({ title, children }) {
 
         <script defer src="/scripts/addProductScript.js" />
 
-
         <script defer src="/scripts/filterScript.js" />
 
         <script defer src="/scripts/userScript.js" />
-
-
       </head>
       <body>
         <header className="header">

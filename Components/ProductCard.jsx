@@ -1,9 +1,10 @@
 const React = require('react');
 
-function ProductCard({ product, city }) {
+function ProductCard({ product }) {
+  console.log()
   return (
     <div className="item-card">
-      <p className="item-card__user-city">{city.name}</p>
+      <p className="item-card__user-city">{product.User.City.name}</p>
       <img className="item-card__img" src={product.img} alt="item img" />
       <h2 className="item-card__name">{product.name}</h2>
       <p className="item-card__price">{product.price}</p>
