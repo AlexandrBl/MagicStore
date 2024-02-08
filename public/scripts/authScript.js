@@ -12,13 +12,11 @@ if (regForm) {
   regForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-
     formMessage.innerHTML = '';
 
     const {
       name, email, password, password2, city, method,
     } = event.target;
-
 
     if (password.value === password2.value) {
       const resReg = await fetch('/api/auth/reg', {
@@ -73,11 +71,9 @@ if (logForm) {
     if (data.message === 'ok') {
       window.location.assign('/products');
     } else if (data.message === 'Заполните все поля') {
-
       formMessage.innerHTML = data.message;
     } else if (data.message === 'Не существет такого пользователя или введен неверный пароль') {
       formMessage.innerHTML = data.message;
-
     }
   });
 }
