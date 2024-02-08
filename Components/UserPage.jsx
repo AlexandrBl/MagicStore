@@ -9,10 +9,10 @@ function UserPage({
     <Layout title={title} cities={cities}>
       <div className="userCard">
         <div className="user-nav">
-          <button type="button" className="user-nav__button">
+          <button disabled type="button" className="user-nav__button button add-button">
             Добавить карточку
           </button>
-          <button type="button" className="user-nav__button">
+          <button type="button" className="user-nav__button button my-button">
             Мои карточки
           </button>
         </div>
@@ -22,7 +22,10 @@ function UserPage({
           !
         </h3>
       </div>
-      <AddForm  />
+      <form className="add-product">
+        <AddForm />
+      </form>
+      <div className="product-container" />
     </Layout>
   );
 }
