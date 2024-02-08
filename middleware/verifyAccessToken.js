@@ -6,17 +6,23 @@ function verifyRefreshToken(req, res, next) {
   try {
     const { refresh } = req.cookies;
     const { user } = jwt.verify(refresh, 'refresh');
-    const { accessToken, refreshToken } = generateTokens({ user: { id: user.id, name: user.name } });
+    const { accessToken, refreshToken } = generateTokens({
+      user: { id: user.id, name: user.name },
+    });
 
     res.locals.user = user;
     res
-      .cookie(cookiesConfig.refresh, refreshToken, { maxAge: cookiesConfig.maxAgeRefresh, httpOnly: true })
-      .cookie(cookiesConfig.access, accessToken, { maxAge: cookiesConfig.maxAgeAccess, httpOnly: true });
+      .cookie(cookiesConfig.refresh, refreshToken, {
+        maxAge: cookiesConfig.maxAgeRefresh,
+        httpOnly: true,
+      })
+      .cookie(cookiesConfig.access, accessToken, {
+        maxAge: cookiesConfig.maxAgeAccess,
+        httpOnly: true,
+      });
     next();
   } catch (error) {
-    res
-      .clearCookie(cookiesConfig.access)
-      .clearCookie(cookiesConfig.refresh);
+    res.clearCookie(cookiesConfig.access)``.clearCookie(cookiesConfig.refresh);
     next();
   }
 }

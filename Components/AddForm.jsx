@@ -4,6 +4,8 @@ function AddForm() {
   return (
     <>
 
+=======
+
       <input
         type="text"
         className="add-product__input"
@@ -30,6 +32,7 @@ function AddForm() {
       <button type="submit" className="add-product__button button">
         Добавить
       </button>
+
 
       <p className="add-product__message" />
     </>

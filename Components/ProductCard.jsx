@@ -2,7 +2,7 @@ const React = require('react');
 
 function ProductCard({ product, city }) {
   return (
-    <div className="item-card">
+    <div className="item-card" data-id={product.id}>
       <p className="item-card__user-city">{city.name}</p>
       <img className="item-card__img" src={product.img} alt="item img" />
       <h2 className="item-card__name">{product.name}</h2>
