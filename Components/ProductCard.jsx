@@ -1,7 +1,6 @@
 const React = require('react');
 
 function ProductCard({ product }) {
-  console.log();
   return (
 
     <>
@@ -19,6 +18,7 @@ function ProductCard({ product }) {
         <button type="button" className="item-card__add-button">
           Добавить в корзину
         </button>
+        <p data-num={product.id} className="order-message" />
       </div>
     </>
   );

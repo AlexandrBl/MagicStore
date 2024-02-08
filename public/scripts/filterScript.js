@@ -5,8 +5,6 @@ if (formFilter) {
     e.preventDefault();
     const { city } = e.target;
 
-    // console.log(city.value);
-
     const res = await fetch(`/products/cities/${city.value}`, {
       method: 'GET',
     });
