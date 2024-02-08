@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 const AddForm = require('./AddForm');
 
 function UserPage({
-  title, user, cities, products,
+  title, user, cities,
 }) {
   return (
     <Layout title={title} cities={cities}>
