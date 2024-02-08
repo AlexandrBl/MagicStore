@@ -1,27 +1,27 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User, City } = require('../../db/models');
-const { genereteTokens } = require('../../utils/authUtils');
+const { generateTokens } = require('../../utils/authUtils');
 const cookieConfig = require('../../config/cookiesConfig');
 
 router.post('/reg', async (req, res) => {
   const {
     name, email, password, city,
   } = req.body;
-  console.log(req.body, '---------------------------------------');
+
   if (name && email && password && city) {
     let user = await User.findOne({ where: { email } });
 
     if (!user) {
       const hash = await bcrypt.hash(password, 10);
 
-      const cityId = await City.findOne({ where: { name: city } });
+      const city_id = (await City.findOne({ where: { name: city } })).id;
 
       user = await User.create({
-        name, email, password: hash, city_id: cityId,
+        name, email, password: hash, city_id,
       });
 
-      const { accessToken, refreshToken } = genereteTokens(
+      const { accessToken, refreshToken } = generateTokens(
         { user: { name: user.name, id: user.id } },
       );
 
@@ -56,7 +56,7 @@ router.post('/log', async (req, res) => {
       const isSame = await bcrypt.compare(password, user.password);
 
       if (isSame) {
-        const { accessToken, refreshToken } = genereteTokens(
+        const { accessToken, refreshToken } = generateTokens(
           { user: { name: user.name, id: user.id } },
         );
 
