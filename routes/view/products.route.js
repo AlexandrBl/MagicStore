@@ -33,10 +33,12 @@ router.get('/cities/:city', async (req, res) => {
   });
 
   const productsFilter = products.filter(
-    (el) => el.User.city_id === oneCity.id
+    (el) => el.User.city_id === oneCity.id,
   );
+
   const html = res.renderComponent(ListProduct, { products: productsFilter });
   res.json({ html, message: 'ok' });
+
 });
 
 module.exports = router;
