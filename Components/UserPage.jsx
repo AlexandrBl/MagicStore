@@ -1,6 +1,6 @@
-const React = require("react");
-const Layout = require("./Layuot");
-const AddForm = require("./AddForm");
+const React = require('react');
+const Layout = require('./Layout');
+const AddForm = require('./AddForm');
 
 function UserPage({ title, user }) {
   return (
