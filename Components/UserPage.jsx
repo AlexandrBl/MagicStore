@@ -3,10 +3,10 @@ const Layout = require('./Layout');
 const AddForm = require('./AddForm');
 
 function UserPage({
-  title, user, cities,
+  title, user,
 }) {
   return (
-    <Layout title={title} cities={cities}>
+    <Layout title={title}>
       <div className="userCard">
         <div className="user-nav">
           <button disabled type="button" className="user-nav__button button add-button">

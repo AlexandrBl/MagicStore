@@ -10,12 +10,11 @@ router.get('/', async (req, res) => {
       include: { model: User, include: { model: City } },
     });
 
-
     const html = res.renderComponent(ProductsPage, {
       title: 'products',
       products,
       cities,
-      
+
     });
     res.status(200).send(html);
   } catch ({ message }) {
@@ -38,7 +37,6 @@ router.get('/cities/:city', async (req, res) => {
 
   const html = res.renderComponent(ListProduct, { products: productsFilter });
   res.json({ html, message: 'ok' });
-
 });
 
 module.exports = router;

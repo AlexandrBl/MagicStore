@@ -6,6 +6,7 @@ const productContainer = document.querySelector('.product-container');
 
 if (myButton) {
   myButton.addEventListener('click', async (event) => {
+    
     event.preventDefault();
 
     const resMyCard = await fetch('/api/user/card');

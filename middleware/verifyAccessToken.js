@@ -22,7 +22,7 @@ function verifyRefreshToken(req, res, next) {
       });
     next();
   } catch (error) {
-    res.clearCookie(cookiesConfig.access)``.clearCookie(cookiesConfig.refresh);
+    res.clearCookie(cookiesConfig.access).clearCookie(cookiesConfig.refresh);
     next();
   }
 }

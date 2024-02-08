@@ -5,12 +5,14 @@ const ProductCard = require('../../Components/ProductCard');
 
 router.post('/', async (req, res) => {
   try {
-    const { name, price, condition, user_id } = req.body;
+    const {
+      name, price, condition, user_id,
+    } = req.body;
     const file = req.files.url;
     if (name && price && file && condition && user_id) {
       if (file.length) {
         const arrUrl = await Promise.all(
-          file.map(async (el) => await fileupload(el))
+          file.map(async (el) => await fileupload(el)),
         );
       } else {
         const img = await fileupload(file);
@@ -24,7 +26,7 @@ router.post('/', async (req, res) => {
         const html = res.renderComponent(
           ProductCard,
           { product },
-          { doctype: false }
+          { doctype: false },
         );
         res.json({ html, message: 'ok' });
       }

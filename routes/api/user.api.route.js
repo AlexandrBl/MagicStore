@@ -1,15 +1,17 @@
 const router = require('express').Router();
-const ProductsList = require('../../Components/ProductsList');
+const ListProduct = require('../../Components/ListProduct');
 const AddForm = require('../../Components/AddForm');
 
-const { Product, City } = require('../../db/models');
+const { Product, User, City } = require('../../db/models');
 
 router.get('/card', async (req, res) => {
   try {
-    const products = await Product.findAll({ where: { user_id: res.locals.user.id } });
-    const city = await City.findOne({ where: { id: res.locals.user.city_id } });
-
-    const html = res.renderComponent(ProductsList, { products, city });
+    console.log(res.locals.user);
+    const products = await Product.findAll({
+      include: { model: User, include: { model: City } }, where: { user_id: res.locals.user.id },
+    });
+    console.log(products);
+    const html = res.renderComponent(ListProduct, { products });
 
     res.status(200).json(html);
   } catch ({ message }) {
