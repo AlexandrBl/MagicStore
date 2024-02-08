@@ -2,9 +2,11 @@ const React = require('react');
 const Layout = require('./Layout');
 const AddForm = require('./AddForm');
 
-function UserPage({ title, user }) {
+function UserPage({
+  title, user, cities, products,
+}) {
   return (
-    <Layout title={title}>
+    <Layout title={title} cities={cities}>
       <div className="userCard">
         <div className="user-nav">
           <button type="button" className="user-nav__button">
@@ -14,9 +16,13 @@ function UserPage({ title, user }) {
             Мои карточки
           </button>
         </div>
-        <h3>Hello {user.name}!</h3>
+        <h3>
+          Hello
+          {user.name}
+          !
+        </h3>
       </div>
-      <AddForm />
+      <AddForm  />
     </Layout>
   );
 }

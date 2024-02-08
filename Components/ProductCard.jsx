@@ -7,7 +7,10 @@ function ProductCard({ product, city }) {
       <img className="item-card__img" src={product.img} alt="item img" />
       <h2 className="item-card__name">{product.name}</h2>
       <p className="item-card__price">{product.price}</p>
-      <p className="item-card__condition">{product.condition}</p>
+      <p className="item-card__condition">
+        Состояние:
+        {product.condition}
+      </p>
       <button type="button" className="item-card__add-button">
         Добавить в корзину
       </button>

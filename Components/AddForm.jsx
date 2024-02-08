@@ -1,16 +1,10 @@
-const React = require("react");
+const React = require('react');
 
-function AddForm({ products }) {
+function AddForm() {
   return (
     <>
       <form className="add-product">
-        <select name="product_id" className="add-product__select">
-          {products.map((el) => (
-            <option className="add-product__option" value={el.id}>
-              {el.condition}
-            </option>
-          ))}
-        </select>
+
         <input
           type="text"
           className="add-product__input"
@@ -23,12 +17,11 @@ function AddForm({ products }) {
           name="img"
           placeholder="img"
         />
-        <input
-          type="text"
-          className="add-product__input"
-          name="condition"
-          placeholder="condition"
-        />
+        <select className="add-product__select" name="condition" id="1">
+          <option value="новая" className="add-product__option">новая</option>
+          <option value="как новая" className="add-product__option">как новая</option>
+          <option value="хорошая" className="add-product__option">хорошая</option>
+        </select>
         <input
           type="text"
           className="add-product__input"

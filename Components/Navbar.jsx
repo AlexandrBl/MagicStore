@@ -5,27 +5,27 @@ function Navbar() {
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__el">
-          <a className="link nav__link" href="">
+          <a className="link nav__link" href="/">
             Главная
           </a>
         </li>
         <li className="nav__el">
-          <a className="link nav__link" href="">
+          <a className="link nav__link" href="/user">
             Личный кабинет
           </a>
         </li>
         <li className="nav__el">
-          <a className="link nav__link" href="">
+          <a className="link nav__link" href="/basket">
             Корзина
           </a>
         </li>
         <li className="nav__el">
-          <a className="link nav__link" href="">
+          <a className="link nav__link" href="/products">
             Товары
           </a>
         </li>
         <li className="nav__el">
-          <a className="link nav__link" href="">
+          <a className="link nav__link" href="/auth">
             loga
           </a>
         </li>
