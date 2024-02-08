@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Product } = require('../../db/models');
-const fileupload = require('../../utils/fileupload');
+const fileupload = require('../../utils/fileUpload');
 const ProductCard = require('../../Components/ProductCard');
 
 router.post('/', async (req, res) => {

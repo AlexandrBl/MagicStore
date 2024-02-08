@@ -10,5 +10,9 @@ if (formFilter) {
     const res = await fetch(`/products/cities/${city.value}`, {
       method: 'GET',
     });
+    const data = await res.json();
+    if (data.message === 'ok') {
+      document.querySelector('.product-list').innerHTML = data.html;
+    }
   });
 }
