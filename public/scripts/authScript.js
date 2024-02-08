@@ -14,7 +14,6 @@ if (regForm) {
       name, email, password, password2, city, method,
     } = event.target;
     console.log(event.target.city.value);
-
     if (password.value === password2.value) {
       const resReg = await fetch('/api/auth/reg', {
         method,
@@ -53,7 +52,7 @@ if (logForm) {
     const resLog = await fetch('/api/auth/log', {
       method,
       headers: {
-        'Content-types': 'application/json',
+        'Content-type': 'application/json',
       },
       body: {
         email: email.value,
