@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const incorrectPage = require('../../components/IncorrectPage');
+const incorrectPage = require('../../Components/IncorrectPage');
 
 router.get('/', async (req, res) => {
   try {

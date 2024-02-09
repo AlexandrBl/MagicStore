@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 
         res.json({ message: 'Товар добавлен в корзину', id: productId });
       } else {
-        const order = await Order.findOne({ where: { user_id: res.locals.user.id } });
+ 
 
         const product = await Product.findOne({ where: { id: productId } });
 
