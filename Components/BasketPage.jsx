@@ -2,11 +2,15 @@ const React = require('react');
 const Layout = require('./Layout');
 const ProductCard = require('./ProductCard');
 
-function BasketPage({ title, products, orderStatus }) {
+function BasketPage({
+  title, products, orderStatus, user,
+}) {
   return (
-    <Layout title={title} products={products}>
+    <Layout title={title} products={products} user={user}>
       <p className="order-status">
-        Стату заказа: {orderStatus}
+        Статус заказа:
+        {' '}
+        {orderStatus}
       </p>
       <ul className="order-item">
         {products.map((el) => (

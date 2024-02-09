@@ -13,8 +13,8 @@ function RegForm({ cities }) {
         {cities.map((el) => <option className="reg-form__option">{el.name}</option>)}
 
       </datalist>
-      <input type="text" name="password" className="reg-form__input input" placeholder="password" />
-      <input type="text" name="password2" className="reg-form__input input" placeholder="repeat password" />
+      <input type="password" name="password" className="reg-form__input input" placeholder="password"  />
+      <input type="password" name="password2" className="reg-form__input input" placeholder="repeat password" />
 
       <button type="submit" className="reg-form__button button">
         Регистрация

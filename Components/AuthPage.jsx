@@ -3,9 +3,9 @@ const Layout = require('./Layout');
 const RegForm = require('./RegForm');
 const LogForm = require('./LogForm');
 
-function AuthPage({ title, cities }) {
+function AuthPage({ title, cities, user }) {
   return (
-    <Layout title={title} cities={cities}>
+    <Layout title={title} cities={cities} user={user}>
       <div className="auth-form">
         <div className="button-container">
           <button type="button" className="auth-form__button log-button" disabled>

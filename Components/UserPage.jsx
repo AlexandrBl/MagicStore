@@ -6,7 +6,7 @@ function UserPage({
   title, user,
 }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <div className="userCard">
         <div className="user-nav">
           <button disabled type="button" className="user-nav__button button add-button">
@@ -16,7 +16,9 @@ function UserPage({
             Мои карточки
           </button>
         </div>
-        <h3 className="greets">Hello {user.name} !</h3>
+        <h3 className="greets">
+          Hello {user.name} !
+        </h3>
       </div>
       <form className="add-product">
         <AddForm />

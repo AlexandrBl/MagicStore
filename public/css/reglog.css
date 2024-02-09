@@ -30,9 +30,7 @@
 
 }
 
-.log-form__input::placeholder{
-  padding: 0 0 0 3rem;
-}
+
 
 .log-form__button {
   width: 100%;
@@ -57,9 +55,7 @@
 
 }
 
-.reg-form__input::placeholder{
-  padding: 0 0 0 3rem;
-}
+
 
 .reg-form__button {
   width: 100%;

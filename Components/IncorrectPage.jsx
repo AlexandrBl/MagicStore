@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function IncorrectPage({ title }) {
+function IncorrectPage({ title, user }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <div className="incorrectPage">
         <p className="incorrectPage__text">404</p>
         <img

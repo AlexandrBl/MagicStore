@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     const cities = await City.findAll();
 
-    const html = res.renderComponent(AuthPage, { title: 'authentication', cities });
+    const html = res.renderComponent(AuthPage, { title: 'authentication', cities, user: res.locals.user });
     res.status(200).send(html);
   } catch ({ message }) {
     res.status(400).send(message);
