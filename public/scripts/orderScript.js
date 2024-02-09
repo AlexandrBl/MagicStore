@@ -24,8 +24,8 @@ if (productList) {
       if (data.message === 'Товар добавлен в корзину') {
         orderMessage.innerHTML = data.message;
 
-        setTimeout(() => { orderMessage.innerHTML = ''; }, 5000);
-      } else if (data.message === 'Неудалось добавить товар') {
+        setTimeout(() => { orderMessage.innerHTML = ''; }, 3000);
+      } else if (data.message === 'Не удалось добавить товар') {
         orderMessage.innerHTML = data.message;
         setTimeout(() => { orderMessage.innerHTML = ''; }, 5000);
       }

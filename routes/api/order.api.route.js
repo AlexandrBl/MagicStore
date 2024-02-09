@@ -16,18 +16,13 @@ router.post('/', async (req, res) => {
 
         const orderItem = await OrderItem.create({ product_id: productId, order_id: order.id });
 
-        console.log(orderItem, 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
-
         const price = +order.price + +product.price;
 
         await order.update({ price: `${price}` });
 
         res.json({ message: 'Товар добавлен в корзину', id: productId });
       } else {
-        console.log(res.locals.user.id);
         const order = await Order.findOne({ where: { user_id: res.locals.user.id } });
-
-        console.log(order);
 
         const product = await Product.findOne({ where: { id: productId } });
 
@@ -42,7 +37,7 @@ router.post('/', async (req, res) => {
     }
   } catch ({ message }) {
     console.log(message);
-    res.json({ message: 'Неудалось добавить товар', id: productId });
+    res.json({ message: 'Неудалось добавить товар' });
   }
 });
 
