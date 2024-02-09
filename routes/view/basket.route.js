@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     if (order) {
       const orderStatus = order.status;
 
-      const orderItem = await OrderItem.findAll({ where: { order_id: order.id }, include: { model: Product, where: { user_id: idUser }, include: { model: User, include: { model: City } } } });
+      const orderItem = await OrderItem.findAll({ include: { model: Product, where: { user_id: idUser }, include: { model: User, include: { model: City } } }, where: { order_id: order.id } });
 
       const products = orderItem.map((el) => el.Product);
 
