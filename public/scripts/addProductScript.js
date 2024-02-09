@@ -5,8 +5,8 @@ if (addProductForm) {
   addProductForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const { name, img, price, condition } = event.target;
-
     const formData = new FormData();
+
     const picData = [...img.files];
     picData.forEach((url) => {
       formData.append('url', url);
@@ -19,12 +19,18 @@ if (addProductForm) {
       method: 'POST',
       body: formData,
     });
+
     const data = await res.json();
 
-    event.target.reset();
     if (data.message === 'ok') {
-      productsList.insertAdjacentHTML('beforeend', data.html);
-      document.querySelector('.add-product__message').innerHTML = '';
+      const message = document.querySelector('.add-product__message');
+
+      message.innerHTML = 'Товар добавлен';
+
+      setTimeout(() => {
+        message.innerHTML = '';
+      }, 3000);
+      event.target.reset();
     } else {
       document.querySelector('.add-product__message').innerHTML = data.message;
     }

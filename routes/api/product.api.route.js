@@ -1,21 +1,21 @@
 const router = require('express').Router();
-const { Product } = require('../../db/models');
-const fileupload = require('../../utils/fileUpload');
+const { Product, User, City } = require('../../db/models');
+const fileupload = require('../../utils/fileupload');
 const ProductCard = require('../../Components/ProductCard');
 
 router.post('/', async (req, res) => {
   try {
-    const {
-      name, price, condition, user_id,
-    } = req.body;
+    const { name, price, condition } = req.body;
+
     const file = req.files.url;
-    if (name && price && file && condition && user_id) {
+    if (name && price && file && condition) {
       if (file.length) {
         const arrUrl = await Promise.all(
-          file.map(async (el) => await fileupload(el)),
+          file.map(async (el) => await fileupload(el))
         );
       } else {
         const img = await fileupload(file);
+
         const product = await Product.create({
           name,
           price,
@@ -23,12 +23,22 @@ router.post('/', async (req, res) => {
           condition,
           user_id: res.locals.user.id,
         });
+
+        let { id } = product;
+
+        let card = await Product.findOne({
+          include: { model: User, include: { model: City } },
+          where: { id },
+        });
+        console.log(card, 'AaaaaaaAAAAAaaAAaAAAA');
         const html = res.renderComponent(
           ProductCard,
-          { product },
-          { doctype: false },
+          { product: card },
+          { doctype: false }
         );
-        res.json({ html, message: 'ok' });
+
+        console.log(html, 'BBBBBBBBBbbBBbBbbBBbbBb');
+        res.json({ message: 'ok', html });
       }
     } else {
       res.json({ message: 'Заполните все поля' });

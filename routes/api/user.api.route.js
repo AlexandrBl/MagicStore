@@ -6,11 +6,12 @@ const { Product, User, City } = require('../../db/models');
 
 router.get('/card', async (req, res) => {
   try {
-    console.log(res.locals.user);
+    // console.log(res.locals.user);
     const products = await Product.findAll({
-      include: { model: User, include: { model: City } }, where: { user_id: res.locals.user.id },
+      include: { model: User, include: { model: City } },
+      where: { user_id: res.locals.user.id },
     });
-    console.log(products);
+    // console.log(products);
     const html = res.renderComponent(ListProduct, { products });
 
     res.status(200).json(html);

@@ -2,12 +2,10 @@ const React = require('react');
 
 function ProductCard({ product }) {
   return (
-
     <>
       <p className="item-card__user-city">{product.User.City.name}</p>
 
       <div className="item-card" data-id={product.id}>
-
         <img className="item-card__img" src={product.img} alt="item img" />
         <h2 className="item-card__name">{product.name}</h2>
         <p className="item-card__price">{product.price}</p>
