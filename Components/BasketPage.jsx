@@ -2,8 +2,11 @@ const React = require('react');
 const Layout = require('./Layout');
 const ProductCard = require('./ProductCard');
 
-function BasketPage({ title, products, orderStatus }) {
+function BasketPage({
+  title, products, orderStatus, user,
+}) {
   return (
+
     <Layout title={title} products={products}>
       {orderStatus === 'Не оформлен' ? (
         <>
@@ -22,6 +25,7 @@ function BasketPage({ title, products, orderStatus }) {
       ) : (
         <p>Корзина пустая</p>
       )}
+
     </Layout>
   );
 }

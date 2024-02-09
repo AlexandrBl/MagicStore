@@ -1,12 +1,16 @@
 const router = require('express').Router();
 const BasketPage = require('../../Components/BasketPage');
+
 const { Product, OrderItem, Order, User, City } = require('../../db/models');
 const nodemailer = require('nodemailer');
+
+
 
 router.get('/', async (req, res) => {
   try {
     let products = [];
     const idUser = res.locals.user.id;
+
     const order = await Order.findOne({
       where: { user_id: idUser, status: 'Не оформлен' },
     });
@@ -32,6 +36,7 @@ router.get('/', async (req, res) => {
       orderStatus,
     });
     res.send(html);
+
   } catch ({ message }) {
     res.send(message);
   }

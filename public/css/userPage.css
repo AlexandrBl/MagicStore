@@ -33,17 +33,13 @@
   margin: 0 0 3rem 0;
 }
 
-.add-product__input::placeholder {
-  padding-left: 3rem;
-}
+
 
 .add-product__select {
   padding-left: 3rem;
   width: 55rem;
   cursor: pointer;
 }
-
-
 
 .add-product__button {
   width: 100%;

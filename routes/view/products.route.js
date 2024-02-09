@@ -39,4 +39,15 @@ router.get('/cities/:city', async (req, res) => {
   res.json({ html, message: 'ok' });
 });
 
+router.get('/:name', async (req, res) => {
+  const { name } = req.params;
+
+  const card = await Product.findAll({
+    include: { model: User, include: { model: City } }, where: { name },
+  });
+
+  const html = res.renderComponent(ListProduct, { products: card });
+  res.json({ html, message: 'ok' });
+});
+
 module.exports = router;

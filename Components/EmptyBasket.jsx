@@ -29,13 +29,16 @@ function Layout({ title, children, user }) {
         <header className="header">
           <div className="center-container">
             <div className="header__container">
-              <div className="logo">MAGIC Store</div>
+              <div className="logo">LOGO</div>
               <Navbar user={user} />
             </div>
           </div>
         </header>
         <main className="main">
-          <div className="center-container">{children}</div>
+          <div className="center-container">
+            {children}
+            <div className="AAA">Корзина пуста</div>
+          </div>
         </main>
         <footer className="footer">
           <div className="center-container">Footer</div>

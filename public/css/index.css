@@ -72,7 +72,7 @@ main {
 }
 
 img {
-  max-width: 30rem;
+  max-width: 27rem;
 }
 
 a {
@@ -97,6 +97,7 @@ input {
   height: 5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  padding: 0 0 0 3rem;
 }
 
 select {
