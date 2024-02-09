@@ -7,6 +7,9 @@ function Layout({ title, children }) {
       <head>
         <title>{title}</title>
         <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+
         <script defer src="/scripts/authScript.js" />
 
         <script defer src="/scripts/addProductScript.js" />
@@ -15,10 +18,7 @@ function Layout({ title, children }) {
 
         <script defer src="/scripts/userScript.js" />
 
-
         <script defer src="/scripts/orderScript.js" />
-
-
       </head>
       <body>
         <header className="header">

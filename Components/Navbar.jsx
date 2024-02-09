@@ -26,11 +26,13 @@ function Navbar() {
         </li>
         <li className="nav__el">
           <a className="link nav__link" href="/auth">
-            loga
+            Регистрация
           </a>
         </li>
         <li className="nav__el">
-          <button type="button" className="logOut-button button">Выход</button>
+          <button type="button" className="logOut-button button">
+            Выход
+          </button>
         </li>
       </ul>
     </nav>
