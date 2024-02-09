@@ -29,7 +29,7 @@ function Layout({ title, children, user }) {
         <header className="header">
           <div className="center-container">
             <div className="header__container">
-              <div className="logo">LOGO</div>
+              <div className="logo">MAGIC Store</div>
               <Navbar user={user} />
             </div>
           </div>
