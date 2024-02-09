@@ -10,8 +10,10 @@ router.get('/', async (req, res) => {
     const order = await Order.findOne({ where: { user_id: idUser } });
     const orderStatus = order.status;
 
+
     // eslint-disable-next-line max-len
     const orderItem = await OrderItem.findAll({ where: { order_id: order.id }, include: { model: Product, where: { user_id: idUser }, include: { model: User, include: { model: City } } } });
+
 
     // console.log(orderItem);
     const products = orderItem.map((el) => el.Product);
