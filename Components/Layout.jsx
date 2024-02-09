@@ -9,6 +9,11 @@ function Layout({ title, children }) {
         <link rel="stylesheet" href="/css/reset.css" />
         <link rel="stylesheet" href="/css/index.css" />
         <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/userPage.css" />
+        <link rel="stylesheet" href="/css/order.css" />
+        <link rel="stylesheet" href="/css/reglog.css" />
 
         <script defer src="/scripts/authScript.js" />
 
@@ -23,7 +28,10 @@ function Layout({ title, children }) {
       <body>
         <header className="header">
           <div className="center-container">
-            <Navbar />
+            <div className="header__container">
+              <div className="logo">LOGO</div>
+              <Navbar />
+            </div>
           </div>
         </header>
         <main className="main">

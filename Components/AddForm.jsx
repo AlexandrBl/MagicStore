@@ -27,7 +27,9 @@ function AddForm() {
         name="price"
         placeholder="price"
       />
+
       <input
+
         type="file"
         className="add-product__input"
         name="img"

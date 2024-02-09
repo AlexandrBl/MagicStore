@@ -2,9 +2,8 @@ const React = require('react');
 
 function SearchForm({ cities, products }) {
   return (
-    <>
+    <div className="filter-container">
       <form className="search-form">
-        <p className="search-form__title">Поиск</p>
 
         <input
           placeholder="Введите название карточки"
@@ -25,9 +24,8 @@ function SearchForm({ cities, products }) {
       </form>
 
       <form className="filter-form">
-        <p className="filter-form__title">Фильтр по городу</p>
 
-        <input className="filter-form__input" name="city" list="cities" />
+        <input placeholder="Выберите город" className="filter-form__input" name="city" list="cities" />
 
         <datalist className="filter-form__datalist" id="cities">
           {cities.map((el) => (
@@ -38,7 +36,7 @@ function SearchForm({ cities, products }) {
           Фильтровать
         </button>
       </form>
-    </>
+    </div>
   );
 }
 
