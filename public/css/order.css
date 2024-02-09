@@ -1,0 +1,24 @@
+.order-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.order-item__el {
+  margin: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.15s;
+  background-color: rgb(211, 211, 211, 0.15);
+  
+}
+
+.order-item__button  {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.order-status {
+  font-size: 2rem;
+}

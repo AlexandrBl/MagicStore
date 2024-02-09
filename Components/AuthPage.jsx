@@ -7,12 +7,14 @@ function AuthPage({ title, cities }) {
   return (
     <Layout title={title} cities={cities}>
       <div className="auth-form">
-        <button type="button" className="auth-form__button log-button" disabled>
-          Sign-In
-        </button>
-        <button type="button" className="auth-form__button reg-button">
-          Sign-Up
-        </button>
+        <div className="button-container">
+          <button type="button" className="auth-form__button log-button" disabled>
+            Sign-In
+          </button>
+          <button type="button" className="auth-form__button reg-button">
+            Sign-Up
+          </button>
+        </div>
         <div className="form-container">
           <form method="POST" className="reg-form" />
           <form method="POST" className="log-form"><LogForm /></form>

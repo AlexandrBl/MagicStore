@@ -16,11 +16,7 @@ function UserPage({
             Мои карточки
           </button>
         </div>
-        <h3>
-          Hello
-          {user.name}
-          !
-        </h3>
+        <h3 className="greets">Hello {user.name} !</h3>
       </div>
       <form className="add-product">
         <AddForm />
