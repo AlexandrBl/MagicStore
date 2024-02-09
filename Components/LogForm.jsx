@@ -6,7 +6,7 @@ module.exports = function LogForm() {
     <>
       <h3 className="log-form__title">Авторизация</h3>
       <input type="text" name="email" className="log-form__input input" placeholder="email" />
-      <input type="text" name="password" className="log-form__input input" placeholder="password" />
+      <input type="password" name="password" className="log-form__input input" placeholder="password" />
       <button type="submit" className="log-form__button button">
         Авторизация
       </button>

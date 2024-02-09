@@ -35,7 +35,10 @@ function Layout({ title, children, user }) {
           </div>
         </header>
         <main className="main">
-          <div className="center-container">{children}</div>
+          <div className="center-container">
+            {children}
+            <div className="AAA">Корзина пуста</div>
+          </div>
         </main>
         <footer className="footer">
           <div className="center-container">Footer</div>
