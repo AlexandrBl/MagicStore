@@ -4,7 +4,7 @@ const incorrectPage = require('../../Components/IncorrectPage');
 router.get('/', async (req, res) => {
   try {
     const html = res.renderComponent(incorrectPage, {
-      title: '404 ERROR',
+      title: 'PRIVET VSEM',
     });
     res.send(html);
   } catch ({ message }) {

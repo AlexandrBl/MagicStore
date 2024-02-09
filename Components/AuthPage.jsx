@@ -9,10 +9,10 @@ function AuthPage({ title, cities, user }) {
       <div className="auth-form">
         <div className="button-container">
           <button type="button" className="auth-form__button log-button" disabled>
-            Sign-In
+            Вход
           </button>
           <button type="button" className="auth-form__button reg-button">
-            Sign-Up
+            Регистрация
           </button>
         </div>
         <div className="form-container">

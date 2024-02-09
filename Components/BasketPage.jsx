@@ -10,7 +10,10 @@ function BasketPage({
     <Layout title={title} products={products}>
       {orderStatus === 'Не оформлен' ? (
         <>
-          <p className="order-status">Статус заказа: {orderStatus}</p>
+          <p className="order-status">
+            Статус заказа:
+            {orderStatus}
+          </p>
           <ul className="order-item">
             {products.map((el) => (
               <li className="order-item__el">

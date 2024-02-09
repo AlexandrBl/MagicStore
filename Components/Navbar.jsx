@@ -31,7 +31,7 @@ function Navbar({ user }) {
         {!user && (
         <li className="nav__el">
           <a className="link nav__link" href="/auth">
-            Регистрация
+            Вход
           </a>
         </li>
         )}
