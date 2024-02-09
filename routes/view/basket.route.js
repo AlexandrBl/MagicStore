@@ -8,13 +8,16 @@ router.get('/', async (req, res) => {
     const order = await Order.findOne({ where: { user_id: idUser } });
     const orderStatus = order.status;
 
-    const orderItem = await OrderItem.findAll({ where: { order_id: order.id }, include: { model: Product } });
+    const orderItem = await OrderItem.findAll({
+      where: { order_id: order.id },
+      include: { model: Product },
+    });
 
     const productsOrder = orderItem.map((el) => el.Product.id);
 
-    const productsPrderList = productsOrder.map(async el => {
-      await 
-    })
+    // const productsPrderList = productsOrder.map(async el => {
+    //   await
+    // })
 
     // console.log(orderItem);
 
